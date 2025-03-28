@@ -88,5 +88,55 @@
         "question": "There is a tickets table in a SQLite database that has columns type, units, and price. Each row is a customer bid for a concert ticket.\ntype\tunits\tprice\nSilver\t627\t1.16\nSILVER\t425\t0.88\nSilver\t608\t1.47\nBRONZE\t880\t1.64\nbronze\t862\t0.75",
         "type": "hardcoded",
         "answer": "SELECT SUM(units * price) AS total_sales FROM tickets WHERE TRIM(LOWER(type)) = 'gold';"
+    },
+    {
+        "question": "Write documentation in Markdown for an **imaginary** analysis of the number of steps you walked each day for a week, comparing over time and with friends. The Markdown must include:\n\nTop-Level Heading: At least 1 heading at level 1, e.g., # Introduction\nSubheadings: At least 1 heading at level 2, e.g., ## Methodology\nBold Text: At least 1 instance of bold text, e.g., **important**\nItalic Text: At least 1 instance of italic text, e.g., *note*\nInline Code: At least 1 instance of inline code, e.g., sample_code\nCode Block: At least 1 instance of a fenced code block, e.g.\n\nprint(\"Hello World\")\nBulleted List: At least 1 instance of a bulleted list, e.g., - Item\nNumbered List: At least 1 instance of a numbered list, e.g., 1. Step One\nTable: At least 1 instance of a table, e.g., | Column A | Column B |\nHyperlink: At least 1 instance of a hyperlink, e.g., [Text](https://example.com)\nImage: At least 1 instance of an image, e.g., ![Alt Text](https://example.com/image.jpg)\nBlockquote: At least 1 instance of a blockquote, e.g., > This is a quote",
+        "type": "none",
+        "answer": "# Weekly Step Analysis\n\n## Introduction\nTracking daily step counts is an effective way to monitor physical activity. This analysis examines the number of steps walked each day over a week, comparing trends over time and with friends.\n\n## Methodology\nThe step data was collected using a fitness tracker and recorded daily. The data was then analyzed using Python.\n\n## Data Collection\nThe steps were tracked using a pedometer and logged in a structured format. Below is a sample of the dataset:\n\n```python\nsteps_data = {\n    \"Monday\": 8000,\n    \"Tuesday\": 7500,\n    \"Wednesday\": 8200,\n    \"Thursday\": 7800,\n    \"Friday\": 9000,\n    \"Saturday\": 10000,\n    \"Sunday\": 9500\n}\n```\n\n## Analysis\n- **Comparison Over Time:** Trends in step counts were observed to identify patterns.\n- *Peer Comparison:* Step counts were compared with friends' data to analyze competitiveness.\n- Identified days with **significant** deviations from the average.\n\n## Results\n### Step Count Table\n| Day       | Steps Walked |\n|-----------|-------------|\n| Monday    | 8000        |\n| Tuesday   | 7500        |\n| Wednesday | 8200        |\n| Thursday  | 7800        |\n| Friday    | 9000        |\n| Saturday  | 10000       |\n| Sunday    | 9500        |"
+    },
+    {
+        "question": "Download the image below and compress it losslessly to an image that is less than 1,500 bytes. By losslessly, we mean that every pixel in the new image should be identical to the original image.",
+        "type": "none",
+        "answer": ""
+    },
+    {
+        "question": "Publish a page using GitHub Pages that showcases your work. Ensure that your email address krishna.kumar@gramener.com is in the page's HTML.\n\nGitHub pages are served via CloudFlare which obfuscates emails. So, wrap your email address inside a:\n\n<!--email_off-->krishna.kumar@gramener.com<!--/email_off-->\nWhat is the GitHub Pages URL? It might look like: https://[USER].github.io/[REPO]/",
+        "type": "",
+        "answer": "https://krishna-gramener.github.io/PersonalPage-TDSAssignment2/"
+    },
+    {
+        "question": "Let's make sure you can access Google Colab. Run this program on Google Colab, allowing all required access to your email ID: krishna.kumar@gramener.com.\n\nimport hashlib\nimport requests\nfrom google.colab import auth\nfrom oauth2client.client import GoogleCredentials\n\nauth.authenticate_user()\ncreds = GoogleCredentials.get_application_default()\ntoken = creds.get_access_token().access_token\nresponse = requests.get(\n  \"https://www.googleapis.com/oauth2/v1/userinfo\",\n  params={\"alt\": \"json\"},\n  headers={\"Authorization\": f\"Bearer {token}\"}\n)\nemail = response.json()[\"email\"]\nhashlib.sha256(f\"{email} {creds.token_expiry.year}\".encode()).hexdigest()[-5:]\nWhat is the result? (It should be a 5-character string)",
+        "type": "code",
+        "answer": "ff5d2"
+    },
+    {
+        "question": "Download this image. Create a new Google Colab notebook and run this code (after fixing a mistake in it) to calculate the number of pixels with a certain minimum brightness:\n\nimport numpy as np\nfrom PIL import Image\nfrom google.colab import files\nimport colorsys\n\n# There is a mistake in the line below. Fix it\nimage = Image.open(list(files.upload().keys)[0])\n\nrgb = np.array(image) / 255.0\nlightness = np.apply_along_axis(lambda x: colorsys.rgb_to_hls(*x)[1], 2, rgb)\nlight_pixels = np.sum(lightness > 0.529)\nprint(f'Number of pixels with lightness > 0.529: {light_pixels}')\nWhat is the result? (It should be a number)",
+        "type": "none",
+        "answer": "154203"
+    },
+    {
+        "question": "Download this q-vercel-python.json which has the marks of 100 imaginary students.\n\nCreate and deploy a Python app to Vercel. Expose an API so that when a request like https://your-app.vercel.app/api?name=X&name=Y is made, it returns a JSON response with the marks of the names X and Y in the same order, like this:\n\n{ \"marks\": [10, 20] }\nMake sure you enable CORS to allow GET requests from any origin.\n\nWhat is the Vercel URL? It should look like: https://your-app.vercel.app/api",
+        "type": "none",
+        "answer": "https://vercel-tds-lemon.vercel.app/api"
+    },
+    {
+        "question": "Create a GitHub action on one of your GitHub repositories. Make sure one of the steps in the action has a name that contains your email address krishna.kumar@gramener.com. For example:\n\njobs:\n  test:\n    steps:\n      - name: krishna.kumar@gramener.com\n        run: echo \"Hello, world!\"\n      \nTrigger the action and make sure it is the most recent action.\n\nWhat is your repository URL? It will look like: https://github.com/USER/REPO",
+        "type": "none",
+        "answer": "https://github.com/krishna-gramener/PersonalPage-TDSAssignment2"
+    },
+    {
+        "question": "Create and push an image to Docker Hub. Add a tag named krishna.kumar to the image.\n\nWhat is the Docker image URL? It should look like: https://hub.docker.com/repository/docker/$USER/$REPO/general",
+        "type": "none",
+        "answer": "https://hub.docker.com/repository/docker/ninjacoder11/myrepo/tags/krishna.kumar/sha256-bc75e43a212e9833b04c2721a81ee13bcce49bbff8318fcb9ab0878d3634b7a3"
+    },
+    {
+        "question": "Download q-fastapi.csv. This file has 2-columns:\n\nstudentId: A unique identifier for each student, e.g. 1, 2, 3, ...\nclass: The class (including section) of the student, e.g. 1A, 1B, ... 12A, 12B, ... 12Z\nWrite a FastAPI server that serves this data. For example, /api should return all students data (in the same row and column order as the CSV file) as a JSON like this:\n\n{\n  \"students\": [\n    {\n      \"studentId\": 1,\n      \"class\": \"1A\"\n    },\n    {\n      \"studentId\": 2,\n      \"class\": \"1B\"\n    }, ...\n  ]\n}\nIf the URL has a query parameter class, it should return only students in those classes. For example, /api?class=1A should return only students in class 1A. /api?class=1A&class=1B should return only students in class 1A and 1B. There may be any number of classes specified. Return students in the same order as they appear in the CSV file (not the order of the classes).\n\nMake sure you enable CORS to allow GET requests from any origin.\n\nWhat is the API URL endpoint for FastAPI? It might look like: http://127.0.0.1:8000/api",
+        "type": "none",
+        "answer": "http://127.0.0.1:8000/api"
+    },
+    {
+        "question": "Download Llamafile. Run the Llama-3.2-1B-Instruct.Q6_K.llamafile model with it.\n\nCreate a tunnel to the Llamafile server using ngrok.\n\nWhat is the ngrok URL? It might look like: https://[random].ngrok-free.app/",
+        "type": "none",
+        "answer": "https://ef8e-2409-40c4-187-e0b8-3db8-b66-3950-96fc.ngrok-free.app/"
     }
 ]
