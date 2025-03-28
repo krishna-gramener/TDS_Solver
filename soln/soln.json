@@ -1,0 +1,92 @@
+[
+    {
+        "question": "Install and run Visual Studio Code. In your Terminal (or Command Prompt), type code -s and press Enter. Copy and paste the entire output below. What is the output of code -s?",
+        "type": "hardcoded",
+        "answer": "Version:          Code 1.96.4 (cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba, 2025-01-16T00:16:19.038Z)\nOS Version:       Linux x64 6.12.10-zen1-1-zen\nCPUs:             Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz (12 x 2599)\nMemory (System):  15.49GB (4.65GB free)\nLoad (avg):       4, 3, 2\nVM:               0%\nScreen Reader:    no\nProcess Argv:     --crash-reporter-id 665a5af3-33e0-432c-bc2b-355bdbdafc38\n\nGPU Status:       2d_canvas:                              enabled\n                  canvas_oop_rasterization:               enabled_on\n                  direct_rendering_display_compositor:    disabled_off_ok\n                  gpu_compositing:                        enabled\n                  multiple_raster_threads:                enabled_on\n                  opengl:                                 enabled_on\n                  rasterization:                          enabled\n                  raw_draw:                               disabled_off_ok\n                  skia_graphite:                          disabled_off\n                  video_decode:                           enabled\n                  video_encode:                           disabled_software\n                  vulkan:                                 disabled_off\n                  webgl:                                  enabled\n                  webgl2:                                 enabled\n                  webgpu:                                 disabled_off\n                  webnn:                                  disabled_off\n\nCPU %   Mem MB     PID  Process\n    1      206   70123  code main\n    0       48   70148     zygote\n    2      222   70187       gpu-process\n    0       48   70149     zygote\n    0        0   70151       zygote\n    0       79   70191     utility-network-service\n    0      111   70288  ptyHost\n    0        0   70356       /usr/bin/fish --init-command source \"/opt/visual-studio-code/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration.fish\"\n    0        0   70703         sh /opt/visual-studio-code/bin/code -s\n    0       79   70707           electron-nodejs (cli.js )\n    0      127   70721             /opt/visual-studio-code/code -s\n    0       48   70736               zygote\n    0      159   70776                 gpu-process\n    0       48   70737               zygote\n    0        0   70739                 zygote\n    0       63   70780               utility-network-service\n    0        0   70496       /usr/bin/fish --init-command source \"/opt/visual-studio-code/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration.fish\"\n    0        0   70789       /bin/bash /opt/visual-studio-code/resources/app/out/vs/base/node/cpuUsage.sh 70356 70703 70707 70721 70736 70737 70739\n    0        0   70798         sleep 1\n   12      365   70300  extensionHost [1]\n    0       79   70479       electron-nodejs (languageserver.js )\n    0       79   70659       /opt/visual-studio-code/code /opt/visual-studio-code/resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=70300\n    0        0   70693       [fish] <defunct>\n   15      190   70316  shared-process\n    0      111   70317  fileWatcher [1]\n\nWorkspace Stats: \n|  Window (mandel.cu - Mandelbrot_Acceleration - Visual Studio Code)\n|    Folder (Mandelbrot_Acceleration): 9226 files\n|      File types: py(3424) pyc(3422) pyi(317) so(215) mat(109) h(80) txt(70)\n|                  afm(60) png(54) f90(53)\n|      Conf files: settings.json(1) makefile(1)"
+    },
+    {
+        "question": "Running uv run --with httpie -- https [URL] installs the Python package httpie and sends a HTTPS request to the URL. \nSend a HTTPS request to https://httpbin.org/get with the URL encoded parameter email set to aakash.gorla@gramener.com \nWhat is the JSON output of the command? (Paste only the JSON body, not the headers)",
+        "type": "",
+        "answer": ""
+    },
+    {
+        "question": "Let's make sure you know how to use npx and prettier.\nDownload\n\n. In the directory where you downloaded it, make sure it is called README.md, and run npx -y prettier@3.4.2 README.md | sha256sum.\nWhat is the output of the command?",
+        "type": "cmdline",
+        "answer": "npx -y prettier@3.4.2 README.md | sha256sum."
+    },
+    {
+        "question": "Let's make sure you can write formulas in Google Sheets. Type this formula into Google Sheets. (It won't work in Excel)\n=SUM(ARRAY_CONSTRAIN(SEQUENCE(100, 100, 14, 11), 1, 10))",
+        "type": "llm",
+        "answer": ""
+    },
+    {
+        "question": "Let's make sure you can write formulas in Excel. Type this formula into Excel.\nNote: This will ONLY work in Office 365.",
+        "type": "llm",
+        "answer": ""
+    },
+    {
+        "question": "Just above this paragraph, there's a hidden input with a secret value.\n What is the value in the hidden input?",
+        "type": "llm",
+        "answer": ""
+    },
+    {
+        "question": "How many Wednesdays are there in the date range 1986-11-08 to 2009-07-04?",
+        "type": "llm",
+        "answer": ""
+    },
+    {
+        "question": "Download and unzip file\nwhich has a single extract.csv file inside.\nWhat is the value in the \"answer\" column of the CSV file?",
+        "type": "code",
+        "answer": "ga1_q8"  
+    },
+    {
+        "question": " Let's make sure you know how to use JSON. Sort this JSON array of objects by the value of the age field. In case of a tie, sort by the name field. Paste the resulting JSON below without any spaces or newlines.\n[{\"name\":\"Alice\",\"age\":86},{\"name\":\"Bob\",\"age\":69},{\"name\":\"Charlie\",\"age\":25},{\"name\":\"David\",\"age\":44},{\"name\":\"Emma\",\"age\":42},{\"name\":\"Frank\",\"age\":76},{\"name\":\"Grace\",\"age\":15},{\"name\":\"Henry\",\"age\":84},{\"name\":\"Ivy\",\"age\":1},{\"name\":\"Jack\",\"age\":4},{\"name\":\"Karen\",\"age\":25},{\"name\":\"Liam\",\"age\":39},{\"name\":\"Mary\",\"age\":51},{\"name\":\"Nora\",\"age\":34},{\"name\":\"Oscar\",\"age\":39},{\"name\":\"Paul\",\"age\":74}]",
+        "type": "llm",
+        "answer": ""
+    },
+    {
+        "question": "Download q-multi-cursor-json.txt and use multi-cursors and convert it into a single JSON object, where key=value pairs are converted into {key: value, key: value, ...}. \nWhat's the result when you paste the JSON at tools-in-data-science.pages.dev/jsonhash and click the Hash button?",
+        "type": "",
+        "answer": ""
+    },
+    {
+        "question": " Let's make sure you know how to select elements using CSS selectors. Find all <div>s having a foo class in the hidden element below. What's the sum of their data-value attributes?\nSum of data-value attributes:",
+        "type": "none",
+        "answer": "428"
+    },
+    {
+        "question": "Download and process the files in q-unicode-data.zip which contains three files with different encodings: \n data1.csv: CSV file encoded in CP-1252 \n data2.csv: CSV file encoded in UTF-8 \n data3.txt: Tab-separated file encoded in UTF-16 \n Each file has 2 columns: symbol and value. Sum up all the values where the symbol matches œ OR ˜ across all three files. \n What is the sum of all values associated with these symbols?",
+        "type": "code",
+        "answer": "ga1_q12"
+    },
+    {
+        "question": " Let's make sure you know how to use GitHub. Create a GitHub account if you don't have one. Create a new public repository. Commit a single JSON file called email.json with the value {\"email\": \"aakash.gorla@gramener.com\"} and push it.\nEnter the raw Github URL of email.json so we can verify it. (It might look like https://raw.githubusercontent.com/[GITHUB ID]/[REPO NAME]/main/email.json.)",
+        "type": "cmdline",
+        "answer": ""
+    },
+    {
+        "question":"Download q-replace-across-all-files.zip and unzip it into a new folder, then replace all \"IITM\" (in upper, lower, or mixed case) with \"IIT Madras\" in all files. Leave everything as-is - don't change the line endings. What does running cat * | sha256sum in that folder show in bash? ",
+        "type": "cmdline",
+        "answer": ""
+    },
+    {
+        "question": "Download q-list-files-attributes.zip and extract it. Use ls with options to list all files in the folder along with their date and file size. What's the total size of all files at least 7253 bytes large and modified on or after Sun, 14 Jun, 2020, 7:07 am IST? ",
+        "type": "cmdline",
+        "answer": ""
+    },
+    {
+        "question": "Download q-move-rename-files.zip and extract it. Use mv to move all files under folders into an empty folder. Then rename all files replacing each digit with the next. 1 becomes 2, 9 becomes 0, a1b9c.txt becomes a2b0c.txt.\nWhat does running grep . * | LC_ALL=C sort | sha256sum in bash on that folder show? ",
+        "type": "cmdline",
+        "answer": ""
+    },
+    {
+        "question": "Download q-compare-files.zip and extract it. It has 2 nearly identical files, a.txt and b.txt, with the same number of lines.\nHow many lines are different between a.txt and b.txt? ",
+        "type": "cmdline",
+        "answer": ""
+    },
+    {
+        "question": "There is a tickets table in a SQLite database that has columns type, units, and price. Each row is a customer bid for a concert ticket.\ntype\tunits\tprice\nSilver\t627\t1.16\nSILVER\t425\t0.88\nSilver\t608\t1.47\nBRONZE\t880\t1.64\nbronze\t862\t0.75",
+        "type": "hardcoded",
+        "answer": "SELECT SUM(units * price) AS total_sales FROM tickets WHERE TRIM(LOWER(type)) = 'gold';"
+    }
+]
